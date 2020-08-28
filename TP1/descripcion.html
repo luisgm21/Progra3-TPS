@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <title>Descripcion</title>
+    </head>
+    <body>
+        <div>
+            <img src="img/portadadescrip1.jpg" alt="portada" width="300" height="300">
+            <h1>Descripcion</h1>
+        </div>
+        <div >
+            <a href="homepage-main.html">Principal</a>
+            <a href="descripcion.html">Descripcion</a>
+            <a href="login.html">Ingresar</a>
+            <a href="registrousuario.html">Registrarse</a>
+        </div>
+        <br><br>
+        <!-- Pos nose si va un formulario xd-->
+        <div>
+            <form action="#" method="get">
+                <label for="tipo_propiedad">Ingrese Tipo de propiedad</label>
+                <input placeholder="Ingrese tipo de propiedad" list="tipo_propiedad" required>
+                <datalist id="tipo_propiedad">
+                    <option value="Casa">CASA</option>
+                    <option value="Departamento"><strong>DEPARTAMENTO</strong></option>
+                    <option value="Habitacion"><strong>HABITACION</strong></option>
+                </datalist>
+                <br>
+                <label for="tipo_alquiler">Ingrese tipo alquiler</label>
+                <input  placeholder="Ingrese tipo de alquiler" list="tipo_alquiler" name="tipo_alquiler" aria-required="">
+                <datalist  id="tipo_alquiler">
+                    <option value="mensual">Mensual</option>
+                    <option value="quincenal">Quincenal</option>
+                    <option value="semanal">Semanal</option>
+                </datalist>
+                <br>
+                <label for="email">Ingrese su email</label>
+                <input placeholder="Ingrese su email" type="email" name="email" id="email">
+            </form>
+        </div>
+    </body>
+</html>

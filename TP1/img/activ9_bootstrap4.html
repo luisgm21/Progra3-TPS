@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Guardias Medicas</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Sistema Web de Administración de Guardias Médicas</h1>
+            <p>Mediante esta WebApp se podrán gestionar todas las Gusardias Médicas realizadas por profesionales de la Clinica Integral IOM</p>
+        </div>
+        
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">SiWebGM</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gestion Guardias</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    </ul>
+                </div>    
+        </nav>
+       
+        <nav aria-label="breadcrumb"> 
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">1.Gestión Guardias Médicas</a></li>
+                <li class="breadcrumb-item"><a href="#">2.Selección de Empleado</a></li>
+                <li class="breadcrumb-item"><a href="#">3.Lista de Guardias</a></li>
+                <li class="breadcrumb-item active" aria-current="page">4.Creación de Guardia</li>
+            </ol>
+        </nav>
+        
+        <div class="container" style="margin-top:30px">
+            <h3>Gestion de Guardias Medicas: <small>Creación de Guardia</small>
+                <button data-toggle="collapse" data-target="#ayuda" class="btn btn-secondary btn-md letra-boton">
+                Ayuda
+                </button>
+            </h3>
+
+
+
+            <div id="ayuda" class="collapse show">
+                <div class="card">
+                    <h5 class="card-header text-white bg-secondary mb-3">Ayuda</h5>
+                        <div class="card-body">
+                        <p class="card-text">La Gestión de G.M. consiste en 2 pasos: <strong>(1)</strong> Seleccionar un Empleado de la Clínica;
+                            <strong>(2)</strong> Seleccionar un registro de Guardia para modificar o eliminar; o bien agregar un nuevo registro, para el Empleado elegido.</p>
+                        
+                        </div>
+                </div>
+            </div>
+           
+            <br><br>
+            
+            <div class="card">
+                <h5 class="card-header text-white bg-primary mb-3">Datos del Empleado seleccionado</h5>
+                <div class="card-body">
+                    <strong>Cuil Empleado: </strong>27256325989 <br>
+                    <strong>Nombre Empleado: </strong>BRAVO LUISA ANABELLA <br>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="card">
+                <h5 class="card-header text-white bg-primary mb-3">Formulario de Ingreso de Datos</h5>
+                <div class="card-body">
+                    <form action="#" method="post" >
+                        <label for="fecha">Fecha Inicio Guardia *</label>
+                        <input type="date" name="fecha" required="" value="" id="fecha">
+                        
+                        <label for="hora">Hora Inicio *</label>
+                        <input type="text" name="hora" required="" value="" placeholder="Ejemplo: 13:00" list="hs" id="hora">
+                        Formato 24 horas (hh:mm)
+                                    
+                            <datalist id="hs">
+                                <option value="00:00">
+                                </option><option value="06:00">
+                                </option><option value="12:00">
+                                </option><option value="18:00">
+                                </option><option value="23:00">
+                                </option>
+                            </datalist>
+
+                           <label for="duracionGuardia">Duracion Guardia *</label>
+                                <select id="duracionGuardia" name="duracionGuardia" required="" >
+                                        <option value="118">G.MEDICA 24 HS</option>
+                                        <option value="123">G.MEDICA 20 HS</option>
+                                        <option value="124">G.MEDICA 18 HS</option>
+                                        <option value="128">G.MEDICA 16 HS</option>
+                                        <option value="129">G.MEDICA 12 HS</option>
+                                        <option value="130">G.MEDICA  8 HS</option>
+                                        <option value="131">G.MEDICA 4HS</option>
+                                    </select>
+                                
+                            <label for="servicioInterno" >Servicio Interno del Area *</label>
+                            <select id="servicioInterno" name="servicioInterno" required="">
+                                        <option value="12916">GENERAL</option>
+                                        <option value="12916">PEDIATRIA</option>
+                                        <option value="12916">GINECOLOGIA</option>
+                                        <option value="12916">ANESTESISTA</option>
+                            </select>
+ 
+                            <label for="tipoPermanenciaGuardia" >Tipo Permanencia Guardia *</label>
+                            <select id="tipoPermanenciaGuardia" name="tipoPermanenciaGuardia" required="" >
+                                        <option value="ACTIVA">ACTIVA</option>
+                                        <option value="PASIVA">PASIVA</option>
+                            </select>
+
+                            <button name="create" type="submit"> Guardar Cambios</button>
+                            <button name="cancelar" type="submit" formaction="#" formnovalidate=""> Cancelar</button>
+                               
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer class="jumbotron text-center" style="margin-bottom:0">
+            <h4 >Clínica Integral IOM</h4>
+            <p>Desarrollado por la Cátedra Programación III</p>
+            <p><button type="button" class="btn btn-secondary btn-sm">clinica.iom@gmail.com</button></p>
+                
+        </footer>
+    </body>
+</html>
